@@ -31,4 +31,4 @@ jobs:
         git config --global user.email "yamazaki-engines@gmail.com"
         git config --global user.name yamazaki-engines 
         git commit -m “JSON更新” ./assets/json/activity.json
-        gid push origin master
+        git push origin master
