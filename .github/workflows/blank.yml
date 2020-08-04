@@ -24,3 +24,6 @@ jobs:
     - name: Run a one-line script
       run: echo good evening
 
+    # json取得
+    - name: get json
+      run: curl -L -X GET https://script.google.com/macros/s/AKfycbyWPWVeFrTwIJCbKFTLtchMhZlqM8qpA8QxlGXEixZiQeTcQaHu/exec > ./assets/json/activity.json 
