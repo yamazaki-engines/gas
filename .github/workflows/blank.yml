@@ -24,11 +24,13 @@ jobs:
     - name: Run a one-line script
       run: echo good evening
 
-    # json取得
-    - name: get json
+    # activity json取得
+    - name: get activity.json
       run: |
-        curl -L -X GET https://script.google.com/macros/s/AKfycbyWPWVeFrTwIJCbKFTLtchMhZlqM8qpA8QxlGXEixZiQeTcQaHu/exec > ./assets/json/activity.json
-        git config --global user.email "yamazaki-engines@gmail.com"
-        git config --global user.name yamazaki-engines 
-        git commit -m “JSON更新” ./assets/json/activity.json
-        git push origin master
+        curl -L -X GET https://script.google.com/macros/s/AKfycbyWPWVeFrTwIJCbKFTLtchMhZlqM8qpA8QxlGXEixZiQeTcQaHu/exec?type=activity > ./assets/json/activity.json
+ 
+     # news json取得
+    - name: get news.json
+      run: |
+        curl -L -X GET https://script.google.com/macros/s/AKfycbyWPWVeFrTwIJCbKFTLtchMhZlqM8qpA8QxlGXEixZiQeTcQaHu/exec?type=news > ./assets/json/news.json
+
